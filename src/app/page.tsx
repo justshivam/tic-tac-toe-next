@@ -19,12 +19,10 @@ export default function Home() {
   const [gameState, setGameState] = useState(INITAL_GAME_STATE);
   const [isGameComplete, setIsGameComplete] = useState<boolean>(false);
   const [turn, setTurn] = useState<boolean>(false);
-  const [winner, setWinner] = useState<string | null>(null);
   const onResetClick = () => {
     setGameState(INITAL_GAME_STATE);
     setTurn(false);
     setIsGameComplete(false);
-    setWinner(null);
   };
   const checkWinner = (currentGameState: any) => {
     const winningCombinations = [
